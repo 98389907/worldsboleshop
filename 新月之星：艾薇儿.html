@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- 角色資料介紹卡 -->
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body background="新月國背景.jpg" style="background-size:cover; background-repeat: no-repeat;"></body>
+
+<style>
+
+.初始能力值{
+  width:80%;
+  position:sticky;
+}
+.綜合天賦指標{
+  width:80%;
+  position:sticky;
+}
+.text{
+  color:whitesmoke;
+  opacity: 1.0;
+}
+.col-7{
+        background-color:rgba(8,8,8,0.5);
+        width: 60%;
+        font-size: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+}
+.table{
+        color:#FFFFFF;   
+}
+.h1{
+  border-bottom-style:solid;
+}
+
+@media screen and (max-width: 1000px) { 
+
+.image{
+
+  
+}
+
+.col-7{
+  display:flex;
+min-width: 100%;}
+
+
+}
+
+</style>
+  
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-5">
+    <img src="rw (204).png" class="image" alt="rw (204)" width="700px;" height="750px;">
+  </div>
+
+<div class="col-7">
+      <div class="text">
+        <div class="h1">
+      <h1><b>原力覺醒</b></h></div>
+      <h2><i>艾薇兒</i></h2>  
+        <P>CV配音：戶松遙</P>
+        <p>艾薇兒是一位思想成熟的女孩。生於新月聯邦的她，早就掌握了運用核心科技的力量去對抗邪惡。</p>
+        <p>她的天才般的原力控制的超能力，能夠掌管萬物原念控制的念動力，令所有人都為之顫抖和忌憚三分！</p> 
+        <p>雖然如此，艾薇兒仍卻是一位非常自律的好女孩。天生麗質難自棄的她，對善惡和是非觀念有自己的一套正能量的看法。</p>
+        <div>
+          <br>
+           <!-- 能力值 -->
+       <div class="初始能力值">
+        <ul>
+        <li>初始天賦/綜合平均值：</li>
+        <br>
+        <table class="table table-bordered table-striped">
+          <tr>
+            <td class="text-center">力量</td>
+             <td class="text-center">191</td>
+             <td class="text-center">耐久</td>
+             <td class="text-center">98</td>
+             <td class="text-center">敏捷</td>
+             <td class="text-center">163</td>
+             </tr>
+              <tr>
+              <td class="text-center">心靈</td>
+                <td class="text-center">121</td>
+                <td class="text-center">知識</td>
+                 <td class="text-center">151</td>
+                 <td class="text-center">神性</td>
+                 <td class="text-center">60</td>
+              </tr>
+             </ul>
+        </table>
+      </div>
+      <br> <!-- 綜合天賦指標 -->
+
+        <div class="綜合天賦指標">
+              <p class="text-left">武力值</p>
+             <div class="progress">
+              <div class="progress-bar bg-primary" style="width:95%"></div>
+             </div>
+            <p class="text-left">魔力值</p>
+            <div class="progress">
+            <div class="progress-bar bg-warning" style="width:65%"></div>
+            </div>
+            <p class="text-left">速度值</p>
+            <div class="progress">
+             <div class="progress-bar bg-info" style="width:36%" ></div>
+            </div>
+            <p class="text-left">幸運值</p>
+               <div class="progress">
+               <div class="progress-bar bg-danger" style="width:52%"></div>
+              </div>
+</div>
+</div>
+</div>
+</body>
+</html>

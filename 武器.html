@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    <style>  
+            .grid-container{
+                display:inline-grid;
+                grid-gap: 10px;
+                grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+                padding: 5px;
+                style:flex;
+
+            }
+            .grid-container div{
+                background-color: rgb(239, 217, 174);
+                padding:10px;
+                font-size:large;
+                text-align: left;
+                width:95%;
+                height:55%;
+                style:flex;
+
+            }
+            .grid-container div:hover{
+                background-color:rgb(255, 221, 0);
+            }
+
+            .item1{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }      
+            .item2{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+            .item3{
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+
+            .item5{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }   
+            .item6{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            } 
+            .item7{
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }          
+            .item9{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            } 
+            .item10{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            } 
+            .item11{
+                grid-column-start: 3;
+                grid-column-end: 4;
+            } 
+
+            
+            .footer {
+    align-items: center;
+    background-color: #333334;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    z-index: 1;
+
+}
+.policy, .socialmedia {
+    display: flex;
+
+}
+.socialmedia {
+    gap: 25px;
+    margin-bottom: 0.9rem;
+
+}
+.navbar{
+    background: linear-gradient(rgba(6,12,9,.8),rgba(0,255,237,.1) 80.71%);
+    font-size: 1.2rem;
+    height: 60px;
+    justify-content:space-between;
+    width: 100%;
+    z-index: 1;
+    position:fixed;
+}
+.grid-container h1,p,p1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#fff
+}
+
+footer p1{
+  justify-content: space-between;
+}
+.divider {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    grid-column:1/5;
+}
+.divider img {
+    height: 50%;
+    width: 20%;
+}
+.dividermirror {
+    transform: scaleX(-1);
+}
+  h2 {
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(top,#f3edc4 30%,#d4bd4f 70%);
+    -webkit-background-clip: text;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+h1{
+  font-size:30px;
+  font-weight: 500;
+  color:#fff
+}
+
+.topnav {
+  display: none;
+  background-color: #333;
+  position: relative;
+}
+
+
+
+@media screen and (min-width: 700px) and (max-width: 1100px) { 
+
+  .grid-container{
+                display:inline-grid;
+                grid-gap: 5px;
+                grid-template-columns: 33% 33% 33%;
+                padding: 5px;
+                style:flex;
+  }
+  .grid-container div{
+                width:100%;
+                height:45%;
+                padding:px;
+                font-size:medium;
+                text-align: left;
+                style:flex;
+            }
+            h1{
+                font-size:25px;
+                font-weight: 600;
+                color:#fff
+}
+            .item1{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }      
+            .item2{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }    
+            .item6{
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }  
+            .item9{
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }  
+
+            .item4{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .item5{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+            .item7{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }          
+            .item8{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            } 
+            .item10{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            } 
+            .item11{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            } 
+            .topnav {
+  display: none;
+  background-color: #333;
+  position: relative;
+}
+
+}
+
+ @media screen and (max-width: 700px) { 
+  .grid-container{
+                display:inline-grid;
+                grid-gap: 10px;
+                grid-template-columns: 48% 48%;
+                padding: 0px;
+                style:flex;
+                padding-left: 15px;
+  }
+  .grid-container div{
+                width:100%;
+                height:45%;
+                padding:0px;
+                font-size:small;
+                text-align: left;
+                style:flex;
+            }
+            h1{
+                font-size:20px;
+                font-weight: 600;
+                color:#fff
+}
+            .item1{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }      
+
+            .item3{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .item5{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .item7{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }          
+            .item9{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            } 
+            .item11{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            } 
+            .navbar-brand{
+              position:fixed;
+              left:0%;
+            }
+            .dropdown{
+              position:fixed;
+              right:2%;
+            }
+            .navbar-nav{
+              display:none;
+            }
+.topnav {
+  display:block;
+  background-color:#333;
+  position:fixed; 
+  top:10%
+}
+
+.topnav a {
+  color: white;
+  padding: 15px 15px;
+  font-size: 15px;
+  display: block;
+}
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a.img {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: rgb(0, 149, 255);
+  color: black;
+}
+ }
+
+    </style>
+    
+</head>
+
+<body background="background.jpg" style="background-size:cover"></body>
+
+
+<body>  
+
+        <!-- The scrollable area -->
+        <div id="section1">
+        <div class="navbar" data-spy="scroll" data-target=".navbar">
+          <nav class="navbar navbar-expand-sm">  
+            
+                <a class="navbar-brand">
+                  <img
+                  alt="Brand"
+                  style="max-width: 60px;"
+                  src="icon.png"
+                   />
+                   <font size="5" color="white"><b>World's Bole Store</b></font>
+                </a>
+                           <!-- Nav-item -->   
+                           <ul class="navbar-nav">
+                            <a class="nav-link"  href="#login">
+                              <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;">登入</b></a>
+                            <a class="nav-link" href="https://domodfg.github.io/world-s-bole/#/check-out">
+                              <img src="shopping-cart.png" alt="shopping-cart" width="20px;"><b style="color:white;">購物車</b></a>
+                              <a class="nav-link" href="https://domodfg.github.io/world-s-bole/#/">
+                                <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;">主頁</b></a>
+                          
+                        </ul>
+                          <!-- Mobile Nav Item -->  
+                           <div class="topnav">
+                            <div id="myLinks">
+                              <a href="#login"><img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;"></b>登入</a>
+                              <a href="https://domodfg.github.io/world-s-bole/#/check-out"> 
+                                <img src="shopping-cart.png" alt="shopping-cart" width="20px;"><b style="color:white;"></b>購物車</a>
+                              <a href="https://domodfg.github.io/world-s-bole/#/">
+                                <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;"></b>主頁</a>
+                            </div>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                              <i class="fa fa-bars"></i>
+                            </a>
+                          </div>
+
+                          <script>
+                            function myFunction() {
+                              var x = document.getElementById("myLinks");
+                              if (x.style.display === "block") {
+                                x.style.display = "none";
+                              } else {
+                                x.style.display = "block";
+                              }
+                            }
+                            </script>
+               
+                          <!-- Dropdown Button -->        
+                <div class="dropdown">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    篩選項
+                  </button>
+                  <div class="dropdown-menu">
+                   <a class="dropdown-item" href="武器.html">武器</a>
+                    <a class="dropdown-item" href="道具.html">道具</a>
+                    <a class="dropdown-item" href="角色.html">角色</a>
+                  </div>
+                </div>
+
+          </nav>
+        </div>
+      </div>
+
+        <!-- Grid Container-->
+
+        <div class="grid-container" style="padding-left:50epx;">
+  
+          <text class="divider">
+            <img src="剑.png" class="dividermirror" alt="divider">
+            <h2>武器</h2>
+            <img src="剑.png" alt="divider">
+          </text>
+
+              <div class="item1">
+                <a href="饮血.html">
+                <image src="装备图标/wq (35).png" alt="装备图标/wq (35)" width="100%;" height="100%;"></image>
+                <br>
+                <br>
+                <h1>飲血劍</h1>
+                <p1><s>HKD$45</s> <b>HKD$35</b></p1>
+                <br>
+                <p>附加生命吸取的長劍，為國界山附近的沼澤地所發現！</p>
+                <p>等級需求：45+</p>
+                <p>星級（稀有度）：★★★★★✩</p>
+              </a>
+                </div>
+
+              <div class="item2">
+                <a href="飞鸟.html">
+                <image src="装备图标/wq (12).png" alt="装备图标/wq (12)" width="100%;" height="100%;"></image>
+                <br>
+                <br>
+                <h1>飛鳥弓</h1>
+                <p1><s>HKD$98</s> <b>HKD$76</b></p1>
+                <br>
+                <p>一把稀有度極高的良弓，只適用於角色：奧蘭多·奇亞娜！</p>
+                  <p>等級需求：36+</p>
+                  <p>星級（稀有度）：★★★★★✩</p>
+                </a>
+            </div>
+
+            <div class="item3">
+              <a href="狡兔書.html">
+              <image src="装备图标/wq (78).png" alt="装备图标/wq (78)" width="100%;" height="100%;"></image>
+              <br>
+                <br>
+              <h1>狡兔書</h1>
+              <p1><s>HKD$75</s> <b>HKD$53</b></p1>
+              <br>
+              <p>時之國魔法師的黑暗聖經！傳說是魔君七宗罪將領：傲慢死後留下的秘籍？ <p>
+                <p>等級需求：48+</p>
+                <p>星級（稀有度）：★★★★✩</p>
+              </a>
+          </div>
+
+          <div class="item4">
+            <a href="走狗爪.html">
+            <image src="装备图标/wq (109).png" alt="装备图标/wq (109)" width="100%;" height="100%;"></image>
+            <br>
+                <br>
+            <h1>走狗爪</h1>
+            <p1><s>HKD$66</s> <b>HKD$42</b></p1>
+            <br>
+            <p>七大罪將領：暴食所使用的兇狠利器！只適用於獸人族獵人和刺客。
+              等級需求：38+
+              星級（稀有度）：★★★✩✩</p>
+            </a>
+        </div>
+
+        <div class="item5">
+          <a href="Shopping Cart.html">
+          <image src="装备图标/wq (132).png" alt="装备图标/wq (132)" width="100%;" height="100%;"></image>
+          <br>
+                <br>
+          <h1>海盜槍</h1>
+          <p1><s>HKD$50</s> <b>HKD$36</b></p1>
+          <br>
+          <p>相傳為出沒在波斯灣附近的海盜所用，后被新月國加以改造。</p>
+            <p>  等級需求：34+ </p>
+            <p> 星級（稀有度）：★★★✩✩</p>
+          </a>
+      </div>
+
+      <div class="item6">
+        <a href="Shopping Cart.html">
+        <image src="装备图标/wq (108).png" alt="装备图标/wq (108)" width="100%;" height="100%;"></image>
+        <br>
+                <br>
+        <h1>穿心鏢</h1>
+        <p1><s>HKD$89</s> <b>HKD$60</b></p1>
+        <br>
+        <p>蓬瀛國的忍者必備！</p>
+          <p>等級需求：44+</p>
+          <p>星級（稀有度）：★★✩✩✩</p>
+        </a>
+    </div>
+
+    <div class="item7">
+      <a href="Shopping Cart.html">
+      <image src="装备图标/wq (84).png" alt="装备图标/wq (84)" width="100%;" height="100%;"></image>
+      <br>
+                <br>
+      <h1>Bilibili魔法書</h1>
+      <p1><s>HKD$108</s> <b>HKD$80</b></p1>
+      <br>
+      <p>打開B站次元門的魔法師所擁有！<p>
+      <p>等級需求：54+</p>
+      <p>星級（稀有度）：★★★★★</p>
+    </a>
+  </div>
+
+    <div class="item8">
+    <a href="Shopping Cart.html">
+    <image src="装备图标/wq (31).png" alt="装备图标/wq (31)" width="100%;" height="100%;"></image>
+    <br>
+                <br>
+    <h1>鬼滅之刃</h1>
+    <p1><s>HKD$88</s> <b>HKD$75</b></p1>
+    <br>
+    <p>大哥煉獄杏壽郎臨死前留下的刀刃（只適用於鬼滅聯動角色）！</p>
+    <p>等級需求：60+</p>
+    <p>星級（稀有度）：★★★★★</p>
+  </a>
+   </div>
+
+   <div class="item9">
+    <a href="Shopping Cart.html">
+    <image src="装备图标/wq (19).png" alt="装备图标/wq (19)" width="100%;" height="100%;"></image>
+    <br>
+                <br>
+    <h1>女神弓</h1>
+    <p1><s>HKD$108</s> <b>HKD$95</b></p1>
+    <br>
+    <p>涅比雅女神專用的弓矢，據說蘊含神力加成的元素。</p>
+      <p>等級需求：55+</p>
+      <p>星級（稀有度）：★★★★★★</p>
+    </a>
+   </div>
+
+   <div class="item10">
+    <a href="Shopping Cart.html">
+    <image src="装备图标/wq (60).png" alt="装备图标/wq (60)" width="100%;" height="100%;"></image>
+    <br>
+                <br>
+    <h1>荊棘之冠</h1>
+    <p1><s>HKD$99</s> <b>HKD$88</b></p1>
+    <br>
+    <p>涅比雅化為女神之時曾經戴過的頭飾，也是雅典娜神贈給之物~~</p>
+      <p>等級需求：65+</p>
+      <p>星級（稀有度）：★★★★★★</p>
+    </a>
+   </div>
+
+   <div class="item11">
+    <a href="Shopping Cart.html">
+    <image src="装备图标/wq (47).png" alt="装备图标/wq (47)" width="100%;" height="100%;"></image>
+    <br>
+                <br>
+    <h1>魔神刀</h1>
+    <p1><s>HKD$99</s> <b>HKD$88</b></p1>
+    <br>
+    <p>魔君奧古斯曾經使用過的寶刀，附有惡魔路西法之力！</p>
+      <p>等級需求：70+</p>
+      <p>星級（稀有度）：★★★★★✩</p>
+    </a>
+   </div>
+
+   <div class="item12">
+    <a href="Shopping Cart.html">
+    <image src="装备图标/wq (143).png" alt="装备图标/wq (143)" width="100%;" height="100%;"></image>
+    <br>
+                <br>
+    <h1>炸彈人</h1>
+    <p1><s>HKD$75</s> <b>HKD$50</b></p1>
+    <br>
+    <p>據說是原神可莉和安柏炸彈公仔的混合體？（僅限原神聯動角色）</p>
+      <p>等級需求：49+</p>
+      <p>星級（稀有度）：★★★✩✩</p>
+    </a>
+   </div>
+
+</div>
+   
+
+            <footer>
+              <div class="footer" style="margin-top: 100px;">
+                <div class="row" style="text-align: center;">
+                  <div class="col-sm-3">
+                      <a href="">
+                        <img src="fb.png" alt="fb" width="80px;" height="80px;">
+                      </a>
+                      <br>
+                      <p style="color:rgb(255, 255, 255)">服務條款</p></a>
+
+          
+                  </div>
+      
+                  <div class="col-sm-3">
+                      <a href="">
+                        <img src="ig.png" alt="ig" width="80px;" height="80px;">
+                      </a>
+                      <br>
+                      <p style="color:rgb(255, 255, 255)">私隱政策</p></a>
+                  </div>
+      
+                  <div class="col-sm-3">
+                    <a href="">
+                      <a href="">
+                      <img src="twitter.png" alt="twitter" width="80px;" height="80px;"></a>
+                    </a>
+                    <br>
+                    <p style="color:rgb(255, 255, 255)">數碼存根政策</p>
+                  </div>
+      
+                  <div class="col-sm-3">
+                    <a href="">
+                      <img src="youtube.png" alt="youtube" width="80px;" height="80px;">
+                    </a>
+                    <br>
+                    <p style="color:rgb(255, 255, 255)">聯絡我們</p>
+                  </div>
+      
+                </div>
+              </div>
+
+
+            <div class="footer text-center py-3">@2022 Copyright: Presented by Edward Chan</div> 
+            <p style="text-align:center"><a class="nav-link" href="#section1">Back to top</a></p>
+        
+    </footer>
+</body>
+</html>

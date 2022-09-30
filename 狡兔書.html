@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    <style>     
+
+.h3{
+    border-top: burlywood;
+}
+.container h1{
+    border-bottom: rgb(255, 255, 255);
+    border-bottom-style: solid ;
+}
+
+.checkout a:link, .checkout a:visited {
+  background-color:rgb(0, 114, 236);
+  color:aliceblue;
+  border: 2px solid rgb(32, 0, 128);
+  padding: 10px 20px;
+  text-align:right;
+  text-decoration:none;
+  display:inline-block;
+}
+.h3,td,h5,p1,h1{
+  color: #f0f8ff;
+}
+.navbar{
+    background: linear-gradient(180deg,rgba(6,12,9,.8),rgba(0,255,237,.1) 70.71%);
+    font-size: 1.2rem;
+    height: 60px;
+    position: fixed;
+
+    justify-content:space-between;
+    width: 100%;
+    z-index: 2;
+}
+.alert{
+    position: fixed;
+    margin-top: 60px;
+    width: 100%;
+}
+.footer {
+    align-items: center;
+    background-color: #333334;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    z-index: 1;
+
+}
+.policy, .socialmedia {
+    display: flex;
+
+}
+.socialmedia {
+    gap: 25px;
+    margin-bottom: 0.9rem;
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    width: 100px;
+}
+.decrease-btn, .increase-btn {
+    background-color: hsla(200,1%,53%,.267);
+    padding: 5px 10px;
+}
+.decrease-btn, .increase-btn, .remove-btn {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+}
+.topnav {
+  display: none;
+}
+@media screen and (max-width: 700px) { 
+  .navbar-brand{
+              position:fixed;
+              left:0%;
+              
+            }
+            .navbar-nav{
+              display:none;
+            }
+  .topnav {
+  position:fixed;
+  right:0%;
+  z-index: 10;
+  display:block;
+}
+
+.topnav a {
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  display:block;
+}
+.topnav #myLinks {
+  display: none;
+  margin-top: 60px;
+  background-color:rgb(39, 58, 76);
+}
+
+.topnav a.icon {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0px;
+}
+
+
+.topnav a:hover {
+  background-color: rgb(0, 149, 255);
+  color: black;
+}
+.icon{
+  height:60px;
+  width:50px;
+  text-align: center;
+}
+
+}
+    </style>
+    
+</head>
+
+<body background="background.jpg" style="background-size:cover"></body>
+
+<body>  
+
+        <!-- The scrollable area -->
+        <div class="navbar" data-spy="scroll" data-target=".navbar">
+          <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+            <nav class="navbar navbar-expand-sm">  
+              
+                  <a class="navbar-brand">
+                    <img
+                    alt="Brand"
+                    style="max-width: 60px;"
+                    src="icon.png"
+                     />
+                     <font size="5" color="white"><b>World's Bole Store</b></font>
+                  </a>
+                             <!-- Nav-item -->    
+                  <ul class="navbar-nav">
+                    <a class="nav-link" href="">
+                      <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;">登入</b></a>
+                  
+                    <a class="nav-link" href="Shopping Cart.html">
+                      <img src="shopping-cart.png" alt="shopping-cart" width="20px;"><b style="color:white;">購物車</b></a>
+                      <a class="nav-link" href="Store.html">
+                        <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;">返回</b></a>
+                  
+                </ul>        
+  
+            </nav>
+          </div>
+           <!-- Mobile Nav Item -->  
+           <div class="topnav">
+            <a href="javascript:void(0);" class="icon bg-primary" onclick="myFunction1()">
+              <i class="fa fa-bars fa-lg"></i>
+            </a>
+
+            <div id="myLinks">
+              
+              <a href="#login"><img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;"></b>登入</a>
+              <a href="https://domodfg.github.io/world-s-bole/#/check-out"> 
+                <img src="shopping-cart.png" alt="shopping-cart" width="20px;"><b style="color:white;"></b>購物車</a>
+              <a href="https://domodfg.github.io/world-s-bole/#/">
+                <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;"></b>主頁</a>
+
+                <script>
+                  function myFunction1() {
+                    var x = document.getElementById("myLinks");
+                    if (x.style.display === "block") {
+                      x.style.display = "none";
+                    } else {
+                      x.style.display = "block";
+                    }
+                  }
+                  </script>
+            </div>
+          </div>
+
+
+ 
+
+    
+          <div class="container" style="padding-top:30px;padding-bottom:30px;">
+            <h3 style="color:#f0f8ff; margin-top: 100px;">我的購物車</h3>
+            <div class="row">
+              <div class="col-sm-8">
+               <table class="table table-bordered table-striped">
+               <tr>
+                <td class="text-left">描述</td>
+                 </tr>
+
+                 <tr>
+                 <td class="text-left">
+
+                <a href="Shop.html">
+                  <image src="装备图标/wq (78).png" width="350px;" height="300px;" style="background-color: antiquewhite;">
+                </a>
+                <br>
+                <br>
+                <h5>狡兔書</h5>
+                <p1><b>時之國魔法師的獨門秘籍！蘊含著巨大的魔法力量的奧秘和來源。當然，對魔法師本身的能力需求也是必須的~~</b></p1>
+                <br>
+                <br>
+                <p>等級需求：48+</p>
+                <p>星級（稀有度）：★★★★✩</p>
+                <p>物品屬性：
+                  ＋45魔力值
+                  ＋9%近程防禦
+                  ＋33%元素傷害
+                  ＋16%遠程輸出
+                  </p>
+                  <p>特殊效果：</p>
+                  <p> 綻放的千本焰：（被動技）當面對的敵人多少或等於三個個體，戰鬥過程中可隨機釋放煙火傷害，最多維持3秒鐘。</p> 
+                  <p>   散華禮彌：（主動技）釋放一個類似水球的物體，從天而降，並瞬間化成水花以攝氏高溫100度攻擊敵方（對自己無效）。</p> 
+                  <p> 鏡花水月：（被動技）戰鬥過程中，若敵方對自己造成傷害，則有幾率釋放幻術以致敵方眩暈，該效果持續0.5秒。</p> 
+                    <p>備註：只適用於時之國魔法師角色。</p>
+                  </td>
+
+                 
+
+                 
+                  
+
+                </tr>
+                
+                </table>
+              </div>
+              
+                
+                <div class="col-sm-4" style="color:#f0f8ff" >
+                  <div id="h1">
+                    <h1>小計：</h1>
+                 
+                    <br>
+                    <p id="demo">數量：1
+                    <br>
+                    促銷價：HKD$35</p>
+    
+           
+                       <p1>（該產品將會發貨到你的虛擬賬戶上）</p1>
+                     </tr>
+               
+                <br>
+                <br>
+                <div class="checkout" style="text-align: right;">
+                  <a href="" target="_blank" onclick="myFunction('功能完善中，敬請期待。')">支付</a>
+                <script>
+                  function myFunction(name){
+                  alert(name);
+                  }
+                  </script>
+          
+              </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <footer>
+            <div class="footer" style="margin-top: 100px;">
+              <div class="row" style="text-align: center;">
+                <div class="col-sm-3">
+                    <a href="">
+                      <img src="fb.png" alt="fb" width="80px;" height="80px;">
+                    </a>
+                    <br>
+                    <p style="color:rgb(255, 255, 255)">服務條款</p></a>
+
+        
+                </div>
+    
+                <div class="col-sm-3">
+                    <a href="">
+                      <img src="ig.png" alt="ig" width="80px;" height="80px;">
+                    </a>
+                    <br>
+                    <p style="color:rgb(255, 255, 255)">私隱政策</p></a>
+                </div>
+    
+                <div class="col-sm-3">
+                  <a href="">
+                    <a href="">
+                    <img src="twitter.png" alt="twitter" width="80px;" height="80px;"></a>
+                  </a>
+                  <br>
+                  <p style="color:rgb(255, 255, 255)">數碼存根政策</p>
+                </div>
+    
+                <div class="col-sm-3">
+                  <a href="">
+                    <img src="youtube.png" alt="youtube" width="80px;" height="80px;">
+                  </a>
+                  <br>
+                  <p style="color:rgb(255, 255, 255)">聯絡我們</p>
+                </div>
+    
+              </div>
+            </div>
+
+
+          <div class="footer text-center py-3">@2022 Copyright: Presented by Edward Chan</div> 
+        
+      
+  </footer>
+
+</body>
+</html>

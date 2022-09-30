@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+    <style>     
+
+.container-fluid h1,p{
+    color: rgb(255, 255, 255);
+    text-align:left;
+    font-weight: bold ;
+}
+.初始能力值 table{
+  color: rgb(255, 255, 255);
+    text-align:left;
+    font-weight: bold ;
+    width:92%;
+}
+
+.navbar{
+    background: linear-gradient(180deg,rgba(6,12,9,.8),rgba(0,255,237,.1) 70.71%);
+    font-size: 1.2rem;
+    height: 60px;
+    position: fixed;
+    justify-content:space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer{
+    align-items:center;
+    background-color: #333334;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+.footer p{
+         text-align: center;
+}
+
+
+    .prize img{
+           position:absolute;
+           top: 30%;
+           left: 25%;
+           background-color: rgba(2, 2, 2, 0.8);
+           width:50%;
+           height:90%;
+    } 
+    .prize button{
+           position:absolute;
+           top: 30%;
+           right: 25%;
+    } 
+    .朵啦{
+           position:absolute;
+           top: 7%;
+           left: 10%;
+    }
+    .topnav {
+  display: none;
+}
+
+    @media screen and (max-width: 700px) { 
+  .navbar-brand{
+              position:fixed;
+              left:0%;
+              
+            }
+            .navbar-nav{
+              display:none;
+            }
+            .goldborder{ 
+          max-width: 400%;
+      }
+          .朵啦{ 
+          max-width: 320%;}
+          
+          .col-8{ flex: 0 0 100%;
+          min-width: 140%;
+        margin-left:-60px;
+        text-align:left;
+}
+        
+          .img1{display:flex;
+            padding-left: 35%;
+          }
+          .footer p{
+         text-align: center;
+}
+.topnav {
+  position:fixed;
+  right:0%;
+  z-index: 10;
+  display:block;
+}
+
+.topnav a {
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  display:block;
+}
+.topnav #myLinks {
+  display: none;
+  margin-top: 60px;
+  background-color:rgb(39, 58, 76);
+}
+
+.topnav a.icon {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0px;
+}
+
+
+.topnav a:hover {
+  background-color: rgb(0, 149, 255);
+  color: black;
+}
+.icon{
+  height:60px;
+  width:50px;
+  text-align: center;
+}
+
+ }
+
+    </style>
+    
+</head>
+
+<body background="background.jpg" style="background-size:cover"></body>
+
+<body>  
+
+        <!-- The scrollable area -->
+        <div class="navbar" data-spy="scroll" data-target=".navbar">
+          <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+            <nav class="navbar navbar-expand-sm">  
+              
+                  <a class="navbar-brand">
+                    <img
+                    alt="Brand"
+                    style="max-width: 60px;"
+                    src="icon.png"
+                     />
+                     <font size="5" color="white"><b>World's Bole Store</b></font>
+                  </a>
+                             <!-- Nav-item -->    
+                  <ul class="navbar-nav">
+                    <a class="nav-link" href="">
+                      <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;">登入</b></a>
+                  
+                    <a class="nav-link" href="Shopping Cart.html">
+                      <img src="shopping-cart.png" alt="shopping-cart" width="20px;"><b style="color:white;">購物車</b></a>
+                      <a class="nav-link" href="角色.html">
+                        <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;">返回</b></a>             
+                </ul>        
+            </nav>
+          </div>
+                  <!-- Mobile Nav Item -->  
+                  <div class="topnav">
+                    <a href="javascript:void(0);" class="icon bg-primary" onclick="myFunction()">
+                      <i class="fa fa-bars fa-lg"></i>
+                    </a>
+                    <div id="myLinks">
+                      
+                      <a href="#login"><img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;"></b>登入</a>
+                      <a href="https://domodfg.github.io/world-s-bole/#/check-out"> 
+                        <img src="shopping-cart.png" alt="shopping-cart" width="20px;"><b style="color:white;"></b>購物車</a>
+                      <a href="https://domodfg.github.io/world-s-bole/#/">
+                        <img src="diamond.png" alt="diamond" width="20px;"><b style="color:white;"></b>主頁</a>
+                        <script>
+                          function myFunction() {
+                            var x = document.getElementById("myLinks");
+                            if (x.style.display === "block") {
+                              x.style.display = "none";
+                            } else {
+                              x.style.display = "block";
+                            }
+                          }
+                          </script>
+                    </div>
+                  </div>
+               
+                 
+
+                  <script>
+                    function myFunction() {
+                      var x = document.getElementById("myLinks");
+                      if (x.style.display === "block") {
+                        x.style.display = "none";
+                      } else {
+                        x.style.display = "block";
+                      }
+                    }
+                    </script>
+
+
+            <div class="container-fluid" style="padding-top:100px;">
+
+                   <div class="row">
+
+                    <div id="image" class="col-4">
+                      <image src="goldborder.png" alt="goldborder" class="goldborder" style="width:550px;height:920px;">
+                  <image src="朵啦3.png" alt="朵啦3" class="朵啦" style="width:500px;height:800px;"></image></div>
+                  
+                  <div id="text" class="col-8" style="padding-left:100px;padding-right: 100px;">
+                
+                  <h1 style="padding-right:25px;">
+                    <image src="道具/ui (1392).png" alt="道具/ui (1392)" style="width:40px;height:45px;padding-bottom: 10px;">史提爾·朵拉</h1>
+                
+                  <p>CV：上白石萌音 / 職業：妖術師 / 稱號：幽靈公主 / 稀有度：★★★★★★</p>
+                  <p>簡介：</p>
+                  <p>生活在隆密國的朵拉是一位愛民如子的公主，常年居住在與世隔絕的叢林裡頭。因為得到了遠古妖術師之神索菲婭的垂青，
+                    她不僅從妖術師身上習得了相當高階的巫術，並應用於捕獵和驅趕邪惡！為了保護居於沿岸上的東方部落裡的人民，朵拉不惜以自己的
+                    生命作賭注，雖然最後撿回了一條命，但也險勝了來自東方海上的巨人族的入侵。她的英勇事跡廣為人們傳頌，稱她係“天神的女兒”，
+                    “叢林中的幽靈”和“巨人的剋星”......
+                  </p>
+
+                  <div class="初始能力值">
+                    
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                          <td class="text-center">力量</td>
+                           <td class="text-center">200</td>
+                           <td class="text-center">耐久</td>
+                           <td class="text-center">205</td>
+                           <td class="text-center">敏捷</td>
+                           <td class="text-center">180</td>
+                           </tr>
+                            <tr>
+                            <td class="text-center">心靈</td>
+                              <td class="text-center">211</td>
+                              <td class="text-center">知識</td>
+                               <td class="text-center">197</td>
+                               <td class="text-center">神性</td>
+                               <td class="text-center">131</td>
+                            </tr>
+                          </table>
+                                          
+                    </div>
+                    <p>技能：</p>
+                  <p><image src="道具/ui (2278).png" alt="道具/ui (1770)" style="width:40px;height:45px;padding-bottom: 5px;"></image>
+                    群雄逐鹿：戰鬥階段，朵拉可釋放超過一百頭以上奔跑中的麋鹿靈體進行衝擊，對指定的目標造成其HP不
+
+                      多於30%的傷害，最多維持5秒。</p>
+                  <p><image src="道具/ui (2332).png" alt="道具/ui (2332)" style="width:40px;height:45px;padding-bottom: 10px;"></image>
+                    指鹿為馬：當一個目標以上的敵方被指定後，該目標會暫時被朵拉的巫術變成動物，期間目標不能施放任
+                   何技能直至效果結束，最多維持3秒。</p>
+                  <p><image src="道具/ui (2377).png" alt="道具/ui (2377)" style="width:40px;height:45px;padding-bottom: 10px;"></image>
+                    引狼入室：你可指定一個或以上（最多三個）的目標，對其施展幻術眩暈最多0.8秒。在此狀態下的目標會
+                            被凍結可用魔法MP值的50%。</p>
+                  <p><image src="道具/ui (2374).png" alt="道具/ui (2374)" style="width:40px;height:45px;padding-bottom: 10px;"></image>
+                    亡靈祭祀：當一名隊友（角色）死亡後，朵拉可指定該名角色，操控最多不超過三位以上的亡靈為自己而戰
+                  （過程中必須有至少一名隊友在場）直到回合結束。></p>
+                  <br>
+                  <p style="text-align:center" ><img src="单抽.png" alt="单抽" onclick="single()" style="margin-right:10px;" class="img1">
+                    單次概率：地獄（活動期間UP）<image src="道具/ui (290).png" alt="道具/ui (290)" style="width:30px;height:40px;"></image></p>  
+                  <p style="text-align:center" ><img src="十抽.png" alt="十抽" onclick="tentimes()" style="margin-right:10px;" class="img1">
+                    十連概率：困難（活動期間UP）<image src="道具/ui (290).png" alt="道具/ui (290)" style="width:30px;height:40px;"></image></p>
+                  </a>
+                  <br>
+                  <div class="button" style="text-align:center;">
+                     
+                      <script>
+                        function closeWindow () {
+                          const container=document.querySelector('.container-fluid')
+                          const window=document.querySelector('.prize')
+                          container.removeChild(window)
+                        }
+                          function single() {
+                          let randomNumber =  Math.floor(Math.random() * 100) + 1;
+                          if (randomNumber === 1) {
+                            let prizeContainer = document.createElement('div')
+                            prizeContainer.classList.add('prize')
+                            let prize = document.createElement('img')
+                            prize.src= "道具/恭喜你.png"
+                            let button = document.createElement('button')
+                            button.innerHTML="X"
+                            button.addEventListener("click",closeWindow)
+                            prizeContainer.appendChild(prize)
+                            prizeContainer.appendChild(button)
+                            const container=document.querySelector('.container-fluid')
+                            container.appendChild(prizeContainer);
+                          } else {
+                            let prizeContainer = document.createElement('div')
+                            prizeContainer.classList.add('prize')
+                            let prize = document.createElement('img')
+                            prize.src= "道具/再接再励.png"
+                            let button = document.createElement('button')
+                            button.innerHTML="X"
+                            button.addEventListener("click",closeWindow)
+                            prizeContainer.appendChild(prize)
+                            prizeContainer.appendChild(button)
+                            const container=document.querySelector('.container-fluid')
+                            container.appendChild(prizeContainer);
+                          }
+                        }
+                     
+                          </script>
+                      
+                      <script>
+                        function closeWindow () {
+                          const container=document.querySelector('.container-fluid')
+                          const window=document.querySelector('.prize')
+                          container.removeChild(window)
+                        }
+                          function tentimes() {
+                          let randomNumber =  Math.floor(Math.random() * 50) + 1;
+                          if (randomNumber === 1) {
+                            let prizeContainer = document.createElement('div')
+                            prizeContainer.classList.add('prize')
+                            let prize = document.createElement('img')
+                            prize.src= "道具/恭喜你.png"
+                            let button = document.createElement('button')
+                            button.innerHTML="X"
+                            button.addEventListener("click",closeWindow)
+                            prizeContainer.appendChild(prize)
+                            prizeContainer.appendChild(button)
+                            const container=document.querySelector('.container-fluid')
+                            container.appendChild(prizeContainer);
+                          } else {
+                            let prizeContainer = document.createElement('div')
+                            prizeContainer.classList.add('prize')
+                            let prize = document.createElement('img')
+                            prize.src= "道具/再接再励.png"
+                            let button = document.createElement('button')
+                            button.innerHTML="X"
+                            button.addEventListener("click",closeWindow)
+                            prizeContainer.appendChild(prize)
+                            prizeContainer.appendChild(button)
+                            const container=document.querySelector('.container-fluid')
+                            container.appendChild(prizeContainer);
+                          }
+                        }
+                          </script>
+                    </div>
+                  </div>
+                 
+            </div>
+          </div>
+    
+
+
+            <div class="footer" style="margin-top: 100px;">
+
+              <div class="row" style="text-align: center;">
+                
+                <div class="col-sm-3">
+                    <a href="">
+                      <img src="fb.png" alt="fb" width="80px;" height="80px;">
+                    </a>
+                    <br>
+                    <p style="color:rgb(255, 255, 255)">服務條款</p></a>  
+                </div>
+    
+                <div class="col-sm-3">
+                    <a href="">
+                      <img src="ig.png" alt="ig" width="80px;" height="80px;">
+                    </a>
+                    <br>
+                    <p style="color:rgb(255, 255, 255)">私隱政策</p></a>
+                </div>
+    
+                <div class="col-sm-3">
+                    <a href="">
+                    <img src="twitter.png" alt="twitter" width="80px;" height="80px;"></a>
+                  </a>
+                  <br>
+                  <p style="color:rgb(255, 255, 255)">數碼存根政策</p>
+                </div>
+    
+                <div class="col-sm-3">
+                  <a href="">
+                    <img src="youtube.png" alt="youtube" width="80px;" height="80px;">
+                  </a>
+                  <br>
+                  <p style="color:rgb(255, 255, 255)">聯絡我們</p>
+                </div>
+    
+              </div>
+            </div>
+
+
+          <div class="footer text-center py-3">@2022 Copyright: Presented by Edward Chan</div> 
+        
+      
+  </footer>
+
+</body>
+</html>
